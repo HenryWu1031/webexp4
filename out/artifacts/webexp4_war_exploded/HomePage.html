@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <script src="js/jquery/2.0.0/jquery.min.js"></script>
+    <link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+    <script src="js/bootstrap/3.3.6/bootstrap.min.js"></script>
+</head>
+<style>
+    div.homePage{
+        background-color: #E9EEF1;
+    }
+    div.topDiv{
+        height: 60px;
+        background-color: #3498DB;
+        margin-top: 10px;
+    }
+    div.topDiv img{
+        height: 60px;
+    }
+    div.topDiv img.ImageInfo{
+        margin-left: -30px;
+    }
+    div.topDiv span.title{
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 10px;
+        font-size: 30px;
+        font-family: 楷体;
+        font-weight: bold;
+        color: white;
+    }
+    div.topDiv a{
+        margin-left: 25px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        line-height: 20px;
+        font-size: 18px;
+        font-family: Arial;
+        color: #CED1D2;
+        text-decoration: none;
+    }
+    div.topDiv .floatleft{
+        float: left;
+    }
+    div.topDiv span.rightfloat{
+        float: right;
+        margin-top: 15px;
+        margin-right: 15px;
+        font-size: 18px;
+        font-family: Arial;
+        color: #EBF1F3 ;
+    }
+    div.topDiv a:hover{
+        color: #C40000;
+    }
+    div.navigateBar{
+        background-color: #7DD4F6;
+    }
+    div.navigateBar span.seperate{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    div.navigateBar a:hover{
+        color: #C40000;
+        text-decoration: none;
+    }
+    div.MiddleDiv{
+        margin-top: 8px;
+        height: 300px;
+        background-color: #E9EEF1;
+    }
+    div.MiddleDiv div.leftImage{
+        float: left;
+        width: 40%;
+        height: 200px;
+    }
+    div.MiddleDiv div.rightLogin{
+        width: 58%;
+        height: 300px;
+        overflow: hidden;
+        text-align: center;
+    }
+    div.MiddleDiv div.leftImage img{
+        position: relative;
+        top: 48px;
+        left: 110px;
+    }
+    div.MiddleDiv div.rightLogin div.userLogin{
+        padding-top: 70px;
+        font-family: 黑体;
+        font-size: 21px;
+        font-weight: bold;
+        color: #5D5E5F;
+    }
+    div.MiddleDiv div.rightLogin input{
+        width: 60%;
+        margin:10px auto;
+    }
+    div.MiddleDiv div.rightLogin input.psw{
+        margin-bottom: 20px;
+    }
+    div.hotBookListDiv{
+        height: 675px;
+    }
+    div.hotBookListDiv div.listName{
+        margin-left: 30px;
+        margin-bottom: 10px;
+        font-size: 28px;
+        font-family: Arial;
+        font-weight: bold;
+        border-bottom: 1px solid #EBF3F6 ;
+    }
+    div.hotBookListDiv div.hotBookDiv{
+        background: #E4ECF1;
+        width: 16.66%;
+        height: 292px;
+        float: left;
+        border: 1px solid #818688;
+    }
+    div.hotBookListDiv div.hotBookDiv:hover{
+        border: 1px solid #C40000;
+    }
+    div.hotBookListDiv img.hotbookImage{
+        width: 206px;
+        height: 200px;
+        margin-top: 8px;
+    }
+    div.hotBookListDiv span{
+        display: block;
+        text-align: center;
+    }
+    div.hotBookListDiv span.bookname{
+        font-size: 18px;
+        font-weight: bold;
+        font-family: 宋体;
+    }
+    div.hotBookListDiv span.bookKind{
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    div.hotBookListDiv span.readNumber{
+        font-family: Arial;
+        font-weight: bold;
+    }
+    div.sloganDiv{
+        font-size: 18px;
+        font-family: 楷体;
+        font-weight: bold;
+        text-align: center;
+        background-color: #C4C8C9 ;
+    }
+    div.bookCategory div.category{
+        width: 20%;
+        float: left;
+        background-color: #7E8688;
+        text-align: center;
+    }
+    div.bookCategory div.category span.categoryname{
+        font-size: 20px;
+        font-weight: bold;
+    }
+    div.bookCategory div.category a{
+        color: #333333;
+    }
+    div.bookCategory div.category a:hover{
+        color: #C40000;
+        text-decoration: none;
+    }
+    div.copyright{
+        height: 30px;
+        text-align: center;
+    }
+    div.copyright span{
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial;
+        color: white;
+        display: block;
+        background-color: #0f0f0f;
+    }
+</style>
+<div class="homePage">
+    <div class="topDiv">
+    <span class="sudaImage floatleft">
+        <img src="sudatarget.png" class="ImageTarget">
+        <img src="suda.png" class="ImageInfo">
+    </span>
+        <span class="title floatleft">图书储存管理系统</span>
+        <a href="#nowhere" class="floatleft"><span class="Menu">使用说明</span></a>
+        <a href="#nowhere" class="floatleft"><span class="Menu">系统功能</span></a>
+        <span class="rightfloat">吴航宇</span>
+        <span class="rightfloat">开发者：</span>
+    </div>
+    <div class="navigateBar">
+        <span><a href="https://www.suda.edu.cn/">苏大官网</a></span>
+        <span class="seperate">|</span>
+        <span><a href="http://library.suda.edu.cn/">苏大图书馆</a></span>
+        <span class="seperate">|</span>
+        <span><a href="https://www.szlib.com/">苏州图书馆</a></span>
+        <span class="seperate">|</span>
+        <span><a href="http://www.nlc.cn/">中国国家图书馆</a></span>
+        <span class="seperate">|</span>
+        <span><a href="https://my.suda.edu.cn/portal/_s2/students_sy/main.psp">苏大学生事务中心</a></span>
+    </div>
+    <div class="MiddleDiv">
+        <div class="leftImage">
+            <img width="300px" src="library.jpg">
+        </div>
+        <div class="rightLogin">
+            <div class="userLogin">用户登陆</div>
+            <form action="login" method="post">
+                <input type="text" name="id" class="form-control" placeholder="用户名">
+                <input type="password" name="password" class="form-control psw" placeholder="password">
+                <button type="submit" class="btn btn-primary">提交</button>
+                <button type="reset" class="btn btn-info">重置</button>
+            </form>
+        </div>
+    </div>
+    <div class="hotBookListDiv">
+        <div class="listName">热门图书</div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook1.png" class="hotbookImage"></a>
+            <span class="bookname">你当像鸟飞往你的山</span>
+            <span class="bookKind">外国随笔</span>
+            <span class="readNumber">借阅量：6789</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook2.png" class="hotbookImage"></a>
+            <span class="bookname">健康日历</span>
+            <span class="bookKind">生活</span>
+            <span class="readNumber">借阅量：6422</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook3.png" class="hotbookImage"></a>
+            <span class="bookname">少年读史记</span>
+            <span class="bookKind">历史读物</span>
+            <span class="readNumber">借阅量：5976</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook4.png" class="hotbookImage"></a>
+            <span class="bookname">乌合之众</span>
+            <span class="bookKind">社会科学</span>
+            <span class="readNumber">借阅量：5888</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook5.png" class="hotbookImage"></a>
+            <span class="bookname">杀死一只知更鸟</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">借阅量：5764</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook6.png" class="hotbookImage"></a>
+            <span class="bookname">生命不能承受之轻</span>
+            <span class="bookKind">社会科学</span>
+            <span class="readNumber">借阅量：5463</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook7.png" class="hotbookImage"></a>
+            <span class="bookname">邓小平时代</span>
+            <span class="bookKind">政治</span>
+            <span class="readNumber">借阅量：4876</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook8.png" class="hotbookImage"></a>
+            <span class="bookname">理想国</span>
+            <span class="bookKind">哲学</span>
+            <span class="readNumber">借阅量：4654</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook9.png" class="hotbookImage"></a>
+            <span class="bookname">准备</span>
+            <span class="bookKind">生活</span>
+            <span class="readNumber">借阅量：4444</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook10.png" class="hotbookImage"></a>
+            <span class="bookname">趣说中国史</span>
+            <span class="bookKind">历史读物</span>
+            <span class="readNumber">借阅量：3456</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook11.png" class="hotbookImage"></a>
+            <span class="bookname">目光</span>
+            <span class="bookKind">散文随笔</span>
+            <span class="readNumber">借阅量：3210</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="hotbook/hotbook12.png" class="hotbookImage"></a>
+            <span class="bookname">Java编程思想</span>
+            <span class="bookKind">信息技术</span>
+            <span class="readNumber">借阅量：2766</span>
+        </div>
+    </div>
+    <div class="hotBookListDiv">
+        <div class="listName">推荐图书</div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook1.png" class="hotbookImage"></a>
+            <span class="bookname">恶意</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook2.png" class="hotbookImage"></a>
+            <span class="bookname">秘密</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook3.png" class="hotbookImage"></a>
+            <span class="bookname">阿拉伯的劳伦斯</span>
+            <span class="bookKind">历史读物</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook4.png" class="hotbookImage"></a>
+            <span class="bookname">一九八四</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook5.png" class="hotbookImage"></a>
+            <span class="bookname">占星术杀人魔法</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook6.png" class="hotbookImage"></a>
+            <span class="bookname">他改变了中国</span>
+            <span class="bookKind">人物传记</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook7.png" class="hotbookImage"></a>
+            <span class="bookname">晚清最后十八年</span>
+            <span class="bookKind">历史读物</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook8.png" class="hotbookImage"></a>
+            <span class="bookname">呼啸山庄</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook9.png" class="hotbookImage"></a>
+            <span class="bookname">飘</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook10.png" class="hotbookImage"></a>
+            <span class="bookname">算法导论</span>
+            <span class="bookKind">技术书籍</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook11.png" class="hotbookImage"></a>
+            <span class="bookname">三体</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+        <div class="hotBookDiv">
+            <a href="#nowhere"><img src="recommandbook/rbook12.png" class="hotbookImage"></a>
+            <span class="bookname">福尔摩斯探案全集</span>
+            <span class="bookKind">小说</span>
+            <span class="readNumber">推荐人：站长</span>
+        </div>
+    </div>
+    <div class="sloganDiv">书籍是人类进步的阶梯——高尔基</div>
+    <div class="bookCategory">
+        <div class="category">
+            <span class="categoryname">科研论文</span>
+            <a href="#nowhere"><span class="show">中文期刊</span></a>
+            <a href="#nowhere"><span class="show">国外期刊</span></a>
+            <a href="#nowhere"><span class="show">顶级会议</span></a>
+            <a href="#nowhere"><span class="show">学生论文</span></a>
+        </div>
+        <div class="category">
+            <span class="categoryname">科普读物</span>
+            <a href="#nowhere"><span class="show">社会科学</span></a>
+            <a href="#nowhere"><span class="show">基础学科</span></a>
+            <a href="#nowhere"><span class="show">传统工科</span></a>
+            <a href="#nowhere"><span class="show">新兴科学</span></a>
+        </div>
+        <div class="category">
+            <span class="categoryname">课外杂志</span>
+            <a href="#nowhere"><span class="show">读者</span></a>
+            <a href="#nowhere"><span class="show">译林</span></a>
+            <a href="#nowhere"><span class="show">三联周刊</span></a>
+            <a href="#nowhere"><span class="show">young刊物</span></a>
+        </div>
+        <div class="category">
+            <span class="categoryname">各类小说</span>
+            <a href="#nowhere"><span class="show">侦探小说</span></a>
+            <a href="#nowhere"><span class="show">爱情小说</span></a>
+            <a href="#nowhere"><span class="show">玄幻小说</span></a>
+            <a href="#nowhere"><span class="show">历史小说</span></a>
+        </div>
+        <div class="category">
+            <span class="categoryname">杂文散文</span>
+            <a href="#nowhere"><span class="show">三毛散文</span></a>
+            <a href="#nowhere"><span class="show">鲁迅杂文</span></a>
+            <a href="#nowhere"><span class="show">吴航宇散文</span></a>
+            <a href="#nowhere"><span class="show">龙应台散文</span></a>
+        </div>
+    </div>
+    <div class="copyright">
+        <span>版权所有：1827406023吴航宇</span>
+    </div>
+</div>
+</html>
